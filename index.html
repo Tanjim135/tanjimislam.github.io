@@ -330,6 +330,7 @@
     <div class="contact-btns">
       <a href="https://mail.google.com/mail/?view=cm&amp;to=Itanjim2000@gmail.com" target="_blank" class="cbtn solid">Email Me</a>
       <a href="https://www.linkedin.com/in/tanjim-islam-a7ab621b6/" target="_blank" class="cbtn out">LinkedIn</a>
+      <a href="resume.pdf" target="_blank" class="cbtn out">Resume</a>
     </div>
     <div class="footer-line">&copy; 2026 Tanjim Islam. All rights reserved.</div>
   </div>
@@ -448,11 +449,6 @@ function openModal(id) {
 
   var h = '';
 
-  if (p.pdf) {
-    h += '<div class="m-lbl">Project Preview</div>';
-    h += '<div class="pdf-viewer" id="pdf-container"></div>';
-  }
-
   h += '<div class="file-actions">';
   if (p.pdf) {
     h += '<a href="' + p.pdf + '" target="_blank" class="file-btn view">Open PDF</a>';
@@ -487,10 +483,6 @@ function openModal(id) {
   document.getElementById('m-bd').innerHTML = h;
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
-
-  if (p.pdf) {
-    renderPDF(p.pdf, document.getElementById('pdf-container'));
-  }
 }
 
 function closeModal() {
